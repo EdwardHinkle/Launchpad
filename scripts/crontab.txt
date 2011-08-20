@@ -1,0 +1,2 @@
+*/5 * * * * /web/launchpad/scripts/temperature-get.php >> /dev/null 2>&1
+
