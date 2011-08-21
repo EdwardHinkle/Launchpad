@@ -19,6 +19,7 @@ the serial line. This script is a daemon that listens for incoming UDP packets a
 interprets them as X10 commands and passes them off to the linux command.
 
 Dependencies:
+
  * A physical CM11A serial port X10 controller http://kbase.x10.com/wiki/CM11A
  * heyu CLI interface for the CM11A controller http://www.heyu.org/
  * PEAR module Service_Daemon
