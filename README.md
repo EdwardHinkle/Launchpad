@@ -11,6 +11,19 @@ data is collected at 5-minute intervals and stored in a database. There is a mun
 which provides the last known temperature to the munin daemon so it can be graphed.
 
 
+X10 Proxy
+=========
+The server in the closet is connected to the CM11A X10 controller on its serial port.
+There is a great linux command line utility that handles communicating with the device over
+the serial line. This script is a daemon that listens for incoming UDP packets and 
+interprets them as X10 commands and passes them off to the linux command.
+
+Dependencies:
+ * A physical CM11A serial port X10 controller http://kbase.x10.com/wiki/CM11A
+ * heyu CLI interface for the CM11A controller http://www.heyu.org/
+ * PEAR module Service_Daemon
+
+
 DHCP Server
 ===========
 TODO
