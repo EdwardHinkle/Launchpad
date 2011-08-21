@@ -16,3 +16,8 @@ $IRC_CHANNELS = array(
 );
 define('IRC_BOT_HOSTNAME', 'localhost');
 define('IRC_DEFAULT_CHANNEL', 'launchpad');
+
+define('DYNDNS_PATH', 'https://example.com/dns/ip.php');
+define('DYNDNS_HOST', 'home.example.com');
+define('DYNDNS_USERNAME', '');
+define('DYNDNS_PASSWORD', '');

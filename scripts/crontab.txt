@@ -1,2 +1,3 @@
 */5 * * * * /web/launchpad/scripts/temperature-get.php >> /dev/null 2>&1
+*/5 * * * * /web/launchpad/scripts/dyndns.php >> /dev/null 2>&1
 
