@@ -24,14 +24,26 @@ Dependencies:
  * PEAR module Service_Daemon
 
 
-DHCP Server
-===========
-TODO
-
-
 DHCP Presence Detection
 =======================
-TODO
+This script watches the DHCP logs from the DHCP server and uses them to infer when devices and 
+people are present in the network. This ends up working pretty well as a way to tell when someone
+is home or not. Most mobile phones try to latch on to nearby known wifi networks as soon as possible
+so they will often get a DHCP address as you approach before you actually get inside the house.
+
+Visits are written to the database for both individual devices as well as people, since there is 
+a mechanism to link devices and people in the database.
+
+When someone enters, the bot constructs a greeting to welcome them home, tailored to the time of 
+day and whether they have been there before. 
+
+
+DHCP Server
+===========
+I found it much more convenient to store my DHCP configuration in a simple set of MySQL tables
+rather than in raw config files. It allows a few fun things like enabling DHCP presence detection
+since new devices that get DHCP addresses from the server are added to the database dynamically.
+There are a few utility scripts for generating the dhcpd config files from the database tables.
 
 
 License

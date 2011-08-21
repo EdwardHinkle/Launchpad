@@ -1,0 +1,2 @@
+pad.	360	SOA	nybble.pad.	hostmaster.pad.	20100501	3600	900	1209600	3600
+pad.	86400	IN	NS	nybble.pad.

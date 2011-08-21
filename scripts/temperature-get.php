@@ -40,12 +40,12 @@ if (!$fp) {
 		}
 		$SQL = "INSERT INTO temperature (date, sensor, temperature) VALUES (NOW(), '$s', $f)";
 
-		$query = $db->prepare('INSERT INTO temperature (date, sensor, temperature) VALUES (NOW(), :s, :f)');
+		$query = db()->prepare('INSERT INTO temperature (date, sensor, temperature) VALUES (NOW(), :s, :f)');
 		$query->bindParam(':f', $f);
 		$query->bindParam(':s', $s);
 		$query->execute();
 
-		$query = $db->prepare('UPDATE last_temperature SET date=NOW(), temperature=:f WHERE sensor=:s');
+		$query = db()->prepare('UPDATE last_temperature SET date=NOW(), temperature=:f WHERE sensor=:s');
 		$query->bindParam(':f', $f);
 		$query->bindParam(':s', $s);
 		$query->execute();
@@ -55,5 +55,3 @@ if (!$fp) {
 
 }
 
-
-?>

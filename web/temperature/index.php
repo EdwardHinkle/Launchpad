@@ -1,7 +1,7 @@
 <?php
 include('inc.php');
 
-$last = $db->query('SELECT * FROM last_temperature');
+$last = db()->query('SELECT * FROM last_temperature');
 $sensors = array();
 while($sensor = $last->fetch(PDO::FETCH_OBJ))
         $sensors[$sensor->sensor] = array('date'=>$sensor->date, 'temperature'=>$sensor->temperature);

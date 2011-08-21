@@ -1,0 +1,20 @@
+ddns-update-style none;
+allow bootp;
+option domain-name "pad";
+authoritative;
+
+subnet 10.10.0.0 netmask 255.255.0.0
+{
+	option subnet-mask 255.255.0.0;
+	option routers 10.10.1.1;
+	option domain-name "pad";
+	option domain-name-servers 8.8.8.8, 8.8.4.4;
+	default-lease-time 600;
+	max-lease-time 600;
+	
+	pool {
+		range 10.10.100.1 10.10.100.254;
+		allow unknown-clients;
+	}
+}
+
